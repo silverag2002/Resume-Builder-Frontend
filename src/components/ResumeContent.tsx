@@ -260,9 +260,149 @@ const ResumeContent = () => {
         <div className="text-violet-600 flex flex-row justify-start items-center my-4">
           <span>Add Education +</span>
         </div>
+        <div className="font-semibold text-3xl my-6 ">
+          <span>Website & Social links</span>
+          <button className="w-auto mx-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="w-6 h-6  "
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
+              />
+            </svg>
+          </button>
+        </div>
+        <div className="flex flex-col border-2 rounded-md p-8">
+          <div className="flex flex-row justify-between">
+            <span className="text-lg">Label</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="w-6 h-6 text-violet-600"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 15.75l7.5-7.5 7.5 7.5"
+              />
+            </svg>
+          </div>
+          <div className="flex flex-row items-center justify-between my-4 w-full">
+            <div className="flex flex-col w-1/2">
+              <span className="text-sm text-gray-400">Label</span>
+              <input
+                type="text"
+                name="jobTitle"
+                className="bg-gray-200 h-12 px-4 outline-none rounded-lg flex-2 "
+              />
+            </div>
+            <div className="flex flex-col w-1/2 ml-4">
+              <span className="text-sm text-gray-400 ">Link</span>
+              <input
+                type="text"
+                name="jobTitle"
+                className="bg-gray-200 h-12 px-4 outline-none rounded-lg flex-2 "
+              />
+            </div>
+          </div>
+        </div>
+        <div className="font-semibold text-3xl my-6 ">
+          <span>Skills</span>
+          <button className="w-auto mx-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="w-6 h-6  "
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
+              />
+            </svg>
+          </button>
+        </div>
+        <div className="flex flex-col border-2 rounded-md p-8">
+          <div className="flex flex-row justify-between">
+            <span className="text-lg">Skills</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="w-6 h-6 text-violet-600"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 15.75l7.5-7.5 7.5 7.5"
+              />
+            </svg>
+          </div>
+          <div className="flex flex-row items-center justify-between my-4 w-full">
+            <div className="flex flex-col w-1/2">
+              <span className="text-sm text-gray-400">Skill</span>
+              <input
+                type="text"
+                name="jobTitle"
+                className="bg-gray-200 h-12 px-4 outline-none rounded-lg flex-2 "
+              />
+            </div>
+            <div className="flex flex-col w-1/2 ml-4">
+              <span className="text-sm text-gray-400 ">Level - Selected</span>
+              <div className="flex flex-row justify-stretch">
+                <div className="bg-red-200 w-12 h-12 hover:border-2 hover:border-black"></div>
+                <div className="bg-yellow-200 w-12 h-12 hover:border-2 hover:border-black"></div>
+                <div className="bg-green-200 w-12 h-12 hover:border-2 hover:border-black"></div>
+                <div className="bg-green-300 w-12 h-12 hover:border-2 hover:border-black"></div>
+                <div className="bg-violet-300 w-12 h-12 hover:border-2 hover:border-black"></div>
+              </div>
+            </div>
+          </div>
+          <div className="text-violet-600 flex flex-row justify-start items-center my-4">
+            <span>Add Education +</span>
+          </div>
+        </div>
+
+        <div className="font-semibold text-3xl my-6 ">
+          <span>Add Section</span>
+        </div>
+        <div className="flex flex-row items-center justify-between my-4 w-full">
+          <div className="flex flex-col w-1/2">
+            <span className="text-sm text-violet-600">
+              Extra-Curricular Acitivities
+            </span>
+          </div>
+          <div className="flex flex-col w-1/2 ml-4">
+            <span className="text-sm text-violet-600">Internships</span>
+          </div>
+        </div>
+        <div className="flex flex-row items-center justify-between my-4 w-full">
+          <div className="flex flex-col w-1/2">
+            <span className="text-sm text-violet-600">Courses</span>
+          </div>
+          <div className="flex flex-col w-1/2 ml-4">
+            <span className="text-sm text-violet-600">Hobbies</span>
+          </div>
+        </div>
       </div>
-      <div className="w-1/2 h-screen  bg-gray-200 flex flex-col items-center">
-        <div className="bg-white text-black m-20 mb-6 h-3/4 w-3/4"></div>
+
+      <div className="w-1/2 h-screen  bg-gray-200 flex flex-col items-center ">
+        <div className="bg-white text-black m-20 mb-6 h-3/4 w-3/4 "></div>
         <div className="flex flex-row justify-between items-center w-3/4 my-2">
           <button className="text-violet-600 ">Select template</button>
           <button className="bg-violet-600 text-white p-2 px-6  rounded-md ">
