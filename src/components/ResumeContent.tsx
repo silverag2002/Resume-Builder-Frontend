@@ -1,12 +1,24 @@
 import React, { useState } from "react";
+import PersonalDetails from "./ResumeSections/PersonalDetails";
+import EmploymentHistory from "./ResumeSections/EmploymentHistory";
+import Education from "./ResumeSections/Education";
+import SocialLinks from "./ResumeSections/SocialLinks";
+import Skills from "./ResumeSections/Skills";
 
 const ResumeContent = () => {
-  const [showPersonalDetails, setShowPersonalDetails] = useState(false);
+  // const [showPersonalDetails, setShowPersonalDetails] = useState(false);
 
-  function handleClick(event: any) {
+  // function handleClick(event: any) {
+  //   const id = event.target.getAttribute("id");
+  //   const setName="set"+id
+  //   console.log(id);
+  //   setShowPersonalDetails(!showPersonalDetails);
+  // }
+
+  function handleClick(event: any, changeFunction: any) {
     const id = event.target.getAttribute("id");
-    console.log(id);
-    setShowPersonalDetails(!showPersonalDetails);
+
+    changeFunction((prev: Boolean) => !prev);
   }
   return (
     <div className="flex flex-row">
@@ -27,7 +39,13 @@ const ResumeContent = () => {
             />
           </svg>
         </div>
-        <div
+        <PersonalDetails handleClick={handleClick} />
+        <EmploymentHistory handleClick={handleClick} />
+        <Education handleClick={handleClick} />
+        <SocialLinks handleClick={handleClick} />
+        <Skills handleClick={handleClick} />
+
+        {/* <div
           className="font-semibold text-3xl my-6 flex flex-row justify-between items-center cursor-pointer "
           onClick={(event) => handleClick(event)}
           id="personal-details"
@@ -52,13 +70,13 @@ const ResumeContent = () => {
               />
             </svg>
           </div>
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className={`w-full h-1 ${
             showPersonalDetails ? "hidden" : ""
           } bg-gray-200`}
-        ></div>
-        <div
+        ></div> */}
+        {/* <div
           className={` rounded-md  transition-all duration-500 max-h-0 overflow-hidden ${
             showPersonalDetails ? "max-h-full p-8 border-2" : ""
           }`}
@@ -140,7 +158,10 @@ const ResumeContent = () => {
           <div className="text-violet-600 flex flex-row justify-start items-center">
             <span>Add more details +</span>
           </div>
-        </div>
+        </div> */}
+
+        {/* End no please remove from here    */}
+
         {/* <div className="font-semibold text-3xl my-6 ">
           <span>Professional Summary</span>
           <button className="w-auto mx-4">
@@ -172,35 +193,23 @@ const ResumeContent = () => {
             />
           </div>
         </div> */}
-        <div className="font-semibold text-3xl my-6 ">
-          <span>Employment History</span>
-          <button className="w-auto mx-4">
+        {/* <div
+          className="font-semibold text-3xl my-6 flex flex-row justify-between items-center cursor-pointer "
+          onClick={(event) => handleClick(event)}
+          id="personal-details"
+        >
+          <span id="personal-details">Employment History</span>{" "}
+          <div className="border-x border-y rounded-md border-violet-600 p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              className="w-6 h-6  "
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
-              />
-            </svg>
-          </button>
-        </div>
-        <div className="flex flex-col border-2 rounded-md p-8">
-          <div className="flex flex-row justify-between">
-            <span className="text-lg">School</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              className="w-6 h-6 text-violet-600"
+              className={`w-6 h-6 text-violet-600  transition-all duration-500 ease-in-out ${
+                showPersonalDetails ? "rotate-180" : ""
+              }`}
+              id="personal-details"
             >
               <path
                 stroke-linecap="round"
@@ -209,6 +218,13 @@ const ResumeContent = () => {
               />
             </svg>
           </div>
+        </div>
+        <div
+          className={`w-full h-1 ${
+            showPersonalDetails ? "hidden" : ""
+          } bg-gray-200`}
+        ></div>
+        <div className="flex flex-col border-2 rounded-md p-8">
           <div className="flex flex-row items-center justify-between my-4 w-full">
             <div className="flex flex-col w-4/6">
               <span className="text-sm text-gray-400">Employer</span>
@@ -272,36 +288,24 @@ const ResumeContent = () => {
         </div>
         <div className="text-violet-600 flex flex-row justify-start items-center">
           <span>Add Employment +</span>
-        </div>
-        <div className="font-semibold text-3xl my-6 ">
-          <span>Education</span>
-          <button className="w-auto mx-4">
+        </div> */}
+        {/* <div
+          className="font-semibold text-3xl my-6 flex flex-row justify-between items-center cursor-pointer "
+          onClick={(event) => handleClick(event)}
+          id="personal-details"
+        >
+          <span id="personal-details">Education</span>{" "}
+          <div className="border-x border-y rounded-md border-violet-600 p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              className="w-6 h-6  "
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
-              />
-            </svg>
-          </button>
-        </div>
-        <div className="flex flex-col border-2 rounded-md p-8">
-          <div className="flex flex-row justify-between">
-            <span className="text-lg">School</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              className="w-6 h-6 text-violet-600"
+              className={`w-6 h-6 text-violet-600  transition-all duration-500 ease-in-out ${
+                showPersonalDetails ? "rotate-180" : ""
+              }`}
+              id="personal-details"
             >
               <path
                 stroke-linecap="round"
@@ -310,6 +314,13 @@ const ResumeContent = () => {
               />
             </svg>
           </div>
+        </div>
+        <div
+          className={`w-full h-1 ${
+            showPersonalDetails ? "hidden" : ""
+          } bg-gray-200`}
+        ></div>
+        <div className="flex flex-col border-2 rounded-md p-8">
           <div className="flex flex-row items-center justify-between my-4 w-full">
             <div className="flex flex-col w-4/6">
               <span className="text-sm text-gray-400">School</span>
@@ -373,36 +384,24 @@ const ResumeContent = () => {
         </div>
         <div className="text-violet-600 flex flex-row justify-start items-center my-4">
           <span>Add Education +</span>
-        </div>
-        <div className="font-semibold text-3xl my-6 ">
-          <span>Website & Social links</span>
-          <button className="w-auto mx-4">
+        </div> */}
+        {/* <div
+          className="font-semibold text-3xl my-6 flex flex-row justify-between items-center cursor-pointer "
+          onClick={(event) => handleClick(event)}
+          id="personal-details"
+        >
+          <span id="personal-details">Website & Social links</span>{" "}
+          <div className="border-x border-y rounded-md border-violet-600 p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              className="w-6 h-6  "
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
-              />
-            </svg>
-          </button>
-        </div>
-        <div className="flex flex-col border-2 rounded-md p-8">
-          <div className="flex flex-row justify-between">
-            <span className="text-lg">Label</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              className="w-6 h-6 text-violet-600"
+              className={`w-6 h-6 text-violet-600  transition-all duration-500 ease-in-out ${
+                showPersonalDetails ? "rotate-180" : ""
+              }`}
+              id="personal-details"
             >
               <path
                 stroke-linecap="round"
@@ -411,6 +410,13 @@ const ResumeContent = () => {
               />
             </svg>
           </div>
+        </div>
+        <div
+          className={`w-full h-1 ${
+            showPersonalDetails ? "hidden" : ""
+          } bg-gray-200`}
+        ></div>
+        <div className="flex flex-col border-2 rounded-md p-8">
           <div className="flex flex-row items-center justify-between my-4 w-full">
             <div className="flex flex-col w-1/2">
               <span className="text-sm text-gray-400">Label</span>
@@ -429,36 +435,24 @@ const ResumeContent = () => {
               />
             </div>
           </div>
-        </div>
-        <div className="font-semibold text-3xl my-6 ">
-          <span>Skills</span>
-          <button className="w-auto mx-4">
+        </div> */}
+        {/* <div
+          className="font-semibold text-3xl my-6 flex flex-row justify-between items-center cursor-pointer "
+          onClick={(event) => handleClick(event)}
+          id="personal-details"
+        >
+          <span id="personal-details">Skills</span>{" "}
+          <div className="border-x border-y rounded-md border-violet-600 p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              className="w-6 h-6  "
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
-              />
-            </svg>
-          </button>
-        </div>
-        <div className="flex flex-col border-2 rounded-md p-8">
-          <div className="flex flex-row justify-between">
-            <span className="text-lg">Skills</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              className="w-6 h-6 text-violet-600"
+              className={`w-6 h-6 text-violet-600  transition-all duration-500 ease-in-out ${
+                showPersonalDetails ? "rotate-180" : ""
+              }`}
+              id="personal-details"
             >
               <path
                 stroke-linecap="round"
@@ -467,6 +461,13 @@ const ResumeContent = () => {
               />
             </svg>
           </div>
+        </div>
+        <div
+          className={`w-full h-1 ${
+            showPersonalDetails ? "hidden" : ""
+          } bg-gray-200`}
+        ></div>
+        <div className="flex flex-col border-2 rounded-md p-8">
           <div className="flex flex-row items-center justify-between my-4 w-full">
             <div className="flex flex-col w-1/2">
               <span className="text-sm text-gray-400">Skill</span>
@@ -490,7 +491,7 @@ const ResumeContent = () => {
           <div className="text-violet-600 flex flex-row justify-start items-center my-4">
             <span>Add Education +</span>
           </div>
-        </div>
+        </div> */}
 
         <div className="font-semibold text-3xl my-6 ">
           <span>Add Section</span>
