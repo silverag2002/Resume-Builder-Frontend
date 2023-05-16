@@ -95,7 +95,7 @@ export default function PersonalDetails({ handleClick }: any) {
             />
           </div>
         </div>
-        <div className="flex flex-row items-center justify-between my-4">
+        {/* <div className="flex flex-row items-center justify-between my-4">
           <div className="flex flex-col w-1/2 mr-4">
             <span className="text-sm text-gray-400">City</span>
             <input
@@ -112,7 +112,7 @@ export default function PersonalDetails({ handleClick }: any) {
               className="bg-gray-200 h-12 px-4 outline-none rounded-lg flex-2 "
             />
           </div>
-        </div>
+        </div> */}
         <div className="text-violet-600 flex flex-row justify-start items-center">
           <span>Add more details +</span>
         </div>
